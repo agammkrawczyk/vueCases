@@ -20,8 +20,8 @@
   <![endif]-->
 
   <div id="app">
-    <p v-if="godzina < 12"Czesc{{imie}}}co za piękny poranek>
-    <p v-else>Czesc {{imię}} jaki wspaniały dzień</p>
+   <p >Pierwsze auto to{{samochody[0]}}</p>
+    <p> Wszystkie samochody:{{samochody}}</p>
 
 
   </div>
@@ -35,8 +35,7 @@
 new Vue ({
   el:'#app',
   data:{
-  imię:'Tomasz',
-    godzina: new Date().getHours()
+  samochody:['BMW',"Audi","Mercedes"]
   }
 });
       </script>
