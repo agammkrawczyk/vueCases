@@ -20,9 +20,10 @@
   <![endif]-->
 
   <div id="app">
-      <p v-if="rano"> Czesc jest rano </p>
-      <p v-if="popoludniu">Dzeiń dobry</p>
-      <p v-if="noc"> Dobranoc</p>
+    <p v-if="godzina < 12"Czesc{{imie}}}co za piękny poranek>
+    <p v-else>Czesc {{imię}} jaki wspaniały dzień</p>
+
+
   </div>
 
   <script src="http://unpkg.com/vue"></script>
@@ -30,13 +31,12 @@
 
 
   <script>
-        var godzina= new Date().getHours();
+
 new Vue ({
   el:'#app',
   data:{
-    rano: godzina < 12,
-    popoludniu:godzina >= 12 && godzina < 18,
-    noc: godzina>18
+  imię:'Tomasz',
+    godzina: new Date().getHours()
   }
 });
       </script>
