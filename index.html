@@ -21,7 +21,8 @@
 
   <div id="app">
    <ul>
-     <li v-for="fruit in fruits">
+     <li v-for="(fruit,index) in fruits">
+       {{index}}-{{prefix}}{{fruit}}
        {{fruit}}
      </li>
    </ul>
@@ -37,6 +38,7 @@ new Vue ({
   el:'#app',
 data(){
     return{
+      prefix:"LOVE",
       fruits:["apple","pear","plum","banana"]
     };
 
