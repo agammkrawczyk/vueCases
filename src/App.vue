@@ -20,4 +20,15 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+  li{
+    font-weight: bold;
+    color : cornflowerblue;
+
+  }
+  ul li{
+    color: blue;
+  }
+  ul li ul li{
+    color: lightskyblue;
+  }
 </style>

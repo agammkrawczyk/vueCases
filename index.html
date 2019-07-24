@@ -27,8 +27,13 @@
 
 <div id="app">
   <ul>
-    <li v-for="(quantity,fruit,index) in fruits">
-      {{index}}.{{quantity}}x{{fruit}}
+    <li v-for="category in categories">
+      {{category.name}}
+      <ul>
+        <li v-for="product in category.products">
+          {{product}}
+        </li>
+      </ul>
     </li>
   </ul>
 </div>
@@ -42,18 +47,42 @@
     el: '#app',
     data() {
       return {
+        categories:[
+          {
+            name: "fruits",
+            products: [
+              "apple",
+              "pear",
+              "plum",
+              "banana",
+            ]
+          },
+          {
+            name:"vegetables",
+            products:[
+              "carrot",
+              "potatoes",
+              "tomatoes"
+              ]
+            },
+          {
+            name:"drinks",
+            products:[
+              "tea",
+              "water",
+              "cafe",
+              "juice"
+            ]
+          }
 
-        fruits: {
-          "apple": 4,
-          "pear": 3,
-          "plum": 2,
-          "banana": 5
-        }
-      };
+        ]
+      }
 
-    }
-  });
+      }
+
+  })
 </script>
 <!-- built files will be auto injected -->
 </body>
+
 </html>
