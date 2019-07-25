@@ -26,15 +26,14 @@
 <![endif]-->
 
 <div id="app">
-  <ul>
-    <li v-for="category in categories">
-      {{category.name}}
-      <ul>
-        <li v-for="product in category.products">
-          {{product}}
-        </li>
-      </ul>
-    </li>
+  <ul>  <li v-for="continent in continents">
+    {{continent.name}}
+    <ul>
+      <li v-for="country in continent.countries">
+        {{country}}
+      </li>
+    </ul>
+  </li>
   </ul>
 </div>
 
@@ -47,36 +46,35 @@
     el: '#app',
     data() {
       return {
-        categories:[
+        continents:[
           {
-            name: "fruits",
-            products: [
-              "apple",
-              "pear",
-              "plum",
-              "banana",
-            ]
+            name: "Asia",
+            countries: [
+              "China",
+              "Japan",
+              "Thailand"
+              ]
           },
           {
-            name:"vegetables",
-            products:[
-              "carrot",
-              "potatoes",
-              "tomatoes"
+            name:"Europa",
+            countries:[
+              "Poland",
+              "France",
+              "Italy"
               ]
             },
           {
-            name:"drinks",
-            products:[
-              "tea",
-              "water",
-              "cafe",
-              "juice"
+            name:"Africa",
+            countries:[
+              "Kenya",
+              "Egypt",
+              "Cabo Verde",
+              "Tunisia"
             ]
           }
 
         ]
-      }
+      };
 
       }
 
