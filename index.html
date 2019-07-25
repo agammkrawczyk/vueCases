@@ -26,11 +26,11 @@
 <![endif]-->
 
 <div id="app">
-  <ul>  <li v-for="continent in continents">
-    {{continent.name}}
+  <ul>  <li v-for="order in orders">
+    {{order.number}}
     <ul>
-      <li v-for="country in continent.countries">
-        {{country}}
+      <li v-for="product in order.products">
+        {{product}}
       </li>
     </ul>
   </li>
@@ -46,39 +46,27 @@
     el: '#app',
     data() {
       return {
-        continents:[
+        orders:[
           {
-            name: "Asia",
-            countries: [
-              "China",
-              "Japan",
-              "Thailand"
+            number: "1",
+            products: [
+              "milk",
+              "bread"
               ]
           },
           {
-            name:"Europa",
-            countries:[
-              "Poland",
-              "France",
-              "Italy"
+            number:"2",
+            products:[
+              "toys",
+              "car"
+
               ]
-            },
-          {
-            name:"Africa",
-            countries:[
-              "Kenya",
-              "Egypt",
-              "Cabo Verde",
-              "Tunisia"
+            }
             ]
-          }
-
-        ]
-      };
-
+      }
       }
 
-  })
+})
 </script>
 <!-- built files will be auto injected -->
 </body>
