@@ -26,8 +26,9 @@
 <![endif]-->
 
 <div id="app">
- <button  v-on:click="zwieksz">NCISNIJ MNIE</button>
-  <p> Przycisk został wcisnięty {{ile}} razy. </p>
+  <div v-if="stan===1">stan1 </div>
+  <div v-else-if="stan===2"> stan 2</div>
+  <div v-else>inny stan</div>
 </div>
 
 <script src="http://unpkg.com/vue"></script>
@@ -38,13 +39,9 @@
    let vm = new Vue({
     el: '#app',
     data: {
-      ile:0
-    },
-      methods:{
-        zwieksz(){
-     this.ile++;
-   }
+      stan:1
     }
+
 
 
 });
