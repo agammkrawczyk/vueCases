@@ -8,7 +8,7 @@
 <!--[if IE 8]>
 <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html class="no-js"> <!--<![endif]-->
+<html class="no-js" xmlns:v-on="http://www.w3.org/1999/xhtml"> <!--<![endif]-->
 
 <head>
   <meta charset="utf-8">
@@ -26,15 +26,8 @@
 <![endif]-->
 
 <div id="app">
-  <ul>  <li v-for="order in orders">
-    {{order.number}}
-    <ul>
-      <li v-for="product in order.products">
-        {{product}}
-      </li>
-    </ul>
-  </li>
-  </ul>
+ <button  v-on:click="zwieksz">NCISNIJ MNIE</button>
+  <p> Przycisk został wcisnięty {{ile}} razy. </p>
 </div>
 
 <script src="http://unpkg.com/vue"></script>
@@ -42,31 +35,19 @@
 
 <script>
 
-  new Vue({
+   let vm = new Vue({
     el: '#app',
-    data() {
-      return {
-        orders:[
-          {
-            number: "1",
-            products: [
-              "milk",
-              "bread"
-              ]
-          },
-          {
-            number:"2",
-            products:[
-              "toys",
-              "car"
+    data: {
+      ile:0
+    },
+      methods:{
+        zwieksz(){
+     this.ile++;
+   }
+    }
 
-              ]
-            }
-            ]
-      }
-      }
 
-})
+});
 </script>
 <!-- built files will be auto injected -->
 </body>
