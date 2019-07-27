@@ -26,7 +26,7 @@
 <![endif]-->
 
 <div id="app">
-<p> {{powiedzCzesc()}}</p>
+<p> suma liczb:{{zsumuj}}</p>
 </div>
 
 <script src="http://unpkg.com/vue"></script>
@@ -34,18 +34,17 @@
 
 <script>
 
- new Vue({
+ let vm=new Vue({
    el: '#app',
    data: {
-   imie:'Maciek'
+
+     liczby:[ 1,2,3]
    },
-   methods:{
-     powiedzCzesc(){
-       return 'Hello '+ this.imie
+   computed:{
+     zsumuj(){
+       return this.liczby.reduce((sum,val) => sum+val);
      }
    }
-
-
 
 
 });
