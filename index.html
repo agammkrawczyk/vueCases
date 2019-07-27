@@ -26,9 +26,7 @@
 <![endif]-->
 
 <div id="app">
-
-<input type="text"v-model="tekst">
-  <p>Text- {{tekst}}</p>
+<p> {{powiedzCzesc()}}</p>
 </div>
 
 <script src="http://unpkg.com/vue"></script>
@@ -39,7 +37,12 @@
  new Vue({
    el: '#app',
    data: {
-    tekst:''
+   imie:'Maciek'
+   },
+   methods:{
+     powiedzCzesc(){
+       return 'Hello '+ this.imie
+     }
    }
 
 
