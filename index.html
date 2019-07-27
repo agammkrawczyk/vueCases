@@ -26,9 +26,8 @@
 <![endif]-->
 
 <div id="app">
-  <ul>
-    <li v-for="n in 10"> {{n}} </li>
-  </ul>
+
+ <input v-bind:type="typ"/>
 </div>
 
 <script src="http://unpkg.com/vue"></script>
@@ -36,10 +35,10 @@
 
 <script>
 
-   let vm = new Vue({
+ new Vue({
     el: '#app',
     data: {
-
+typ:'number'
     }
 
 
