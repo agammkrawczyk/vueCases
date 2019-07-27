@@ -26,7 +26,7 @@
 <![endif]-->
 
 <div id="app">
-<p> Koszt produktu: {{produktJeden| formatWaluty}}</p>
+<p> Koszt produktu: {{produktJeden| formatWaluty('zl')}}</p>
 </div>
 
 <script src="http://unpkg.com/vue"></script>
@@ -41,8 +41,8 @@
      produktJeden:1234
    },
    filters:{
-     formatWaluty(value){
-       return '$'+ (value/100).toFixed(2)
+     formatWaluty(value,symbol){
+       return symbol+ (value/100).toFixed(2)
      }
    }
 
